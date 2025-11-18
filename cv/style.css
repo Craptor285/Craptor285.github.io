@@ -1,0 +1,347 @@
+:root{
+    --color1: rgba(0, 0, 66, 0.37);
+    --color2: green;
+    --color3: black;
+    --color4: white;
+    --color5: rgb(0, 0, 66);
+    --color6: blue;
+    --color7: rgba(0, 0, 0, 0.582);
+    --color8: rgb(44, 50, 55);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color3);
+    color: white;
+}
+@keyframes slide-down{
+    0% {color:rgba(255, 255, 255, 0)}
+    0% {background-color:rgba(255, 255, 255, 0)}
+    0%{transform:translateY(-100%)}
+    100%{transform: translateY(0%);}
+}
+.menu{
+    position: absolute;
+    background-color: var(--color7);
+    height: 20vh;
+    width: 100%;
+    left: 0%;
+    top: 0%;
+    color: var(--color2);
+}
+
+
+.menu.active{
+    border: solid black 1px;
+    z-index: 9999;
+    position: fixed;
+    left: 0%;
+    text-align: center;
+    animation: slide-down 0.5s ease-out both;
+}
+
+li{
+    list-style: none;
+    display: inline;
+    margin: 10px;
+    font-size: 20px;
+    color: var(--color2);
+}
+li a{
+    color: var(--color4);
+    text-decoration: none;
+}
+li a:hover{
+    animation: underlineGrow 0.5s ease-in-out;
+}
+nav{
+    text-align: center;
+}
+ul{
+    padding-top: 5vh;
+}
+
+.underline-center {
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+
+.underline-center::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+            transition: all 0.4s ease-in-out;
+            transform: translateX(-50%);
+        }
+
+        .underline-center:hover::after {
+            width: 100%;
+        }
+/*banner*/
+.banner{
+    background-image: url("https://images.unsplash.com/photo-1603481588273-2f908a9a7a1b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2V0dXAlMjBnYW1lcnxlbnwwfHwwfHx8MA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    width: 100%;
+}
+.info_banner{
+    font-family: 'Press Start 2P', cursive;
+    background-color: var(--color7);
+    height: 100%;
+    width: 100%;
+}
+.info_banner p{
+    padding-left: 5%;
+    padding-top: 10%;
+    font-size: 28px;
+    width: 55%;
+    text-align: justify;
+}
+
+.foto{
+    position: absolute;
+    bottom: 7.5%;
+    right: 0%;
+    border-bottom: 3px solid var(--color6);
+    border-right: 3px solid var(--color6);
+    border-radius: 50% 0 50% 0;
+    box-shadow: 5px 5px 10px blue;
+    height: 70vh;
+    width: 35vw;
+    overflow: hidden;
+}
+.foto img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*quien soy*/
+.sobre_mi{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color3);
+    align-content: center;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+}
+
+.sobre_mi img{
+    height: 50vh;
+    width: 30vw;
+    display: block;
+    margin: auto;
+}
+.sobre_mi p{
+    position: relative;
+    left: 10%;
+    font-size: 24px;
+    padding: 5%;
+    text-align: justify;
+    align-self: center;
+}
+.sobre_mi h1{
+    position: relative;
+    left: 15%;
+    font-size: 36px;
+}
+
+/*habilidades*/
+.skills{
+    height: 80vh;
+    background-color: var(--color5);
+    width: 100%;
+}
+
+.skills h1{
+    text-align: center;
+    padding-top: 5vh;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+.lista_skills{
+    position: relative;
+    width: 80%;
+    left: 10%;
+}
+
+.lista_skills ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.lista_skills ul li{
+    color: var(--color4);
+    margin:30px;
+}
+.lista_skills ul li .icono{
+    height: 50px;
+    align-self: center;
+    text-align: center;
+    align-items: center;
+}
+/*mis proyectos*/
+.mis_proyectos{
+    position: relative;
+    top: 0%;
+    background-color: var(--color1);
+    width: 100%;
+
+}
+
+.mis_proyectos h1{
+    text-align: center;
+    font-size: 36px;
+}
+
+.lista_proyectos{
+    position: relative;
+    width: 90%;
+    left: 2.5%;
+}
+
+
+
+.card1, .card2, .card3, .card4{
+    position: relative;
+    height: 200px;
+    width: 300px;
+    display: inline-block;
+    margin: 50px;
+}
+
+.card1::after{
+    content: '';
+    background-image: url("img/afrodita_page.png");
+    background-size: cover;
+    background-position: center;
+}
+.card2::after{
+    content: '';
+    background-image: url("img/nutricroc_page.png");
+    background-size: cover;
+    background-position: center;
+}
+.card3::after{
+    content: '';
+    background-image: url("img/vhelth_page1.png");
+    background-size: cover;
+    background-position: center;
+}
+.card4::after{
+    content: '';
+    background-image: url("img/RootsTreeRemoval_page.png");
+    background-size: cover;
+    background-position: center;
+}
+.card1::after, .card2::after, .card3::after, .card4::after{
+    content: '';
+    position: absolute;
+    height: 250px;
+    width: 350px;
+    transition: all 0.4s ease-in-out;
+    display: inline-block;
+    border-radius: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    box-shadow: 5px 5px 15px rgb(20, 119, 194);
+}
+.card1:hover::after, .card2:hover::after, .card3:hover::after, .card4:hover::after{
+    height: 300px;
+    width: 400px;
+}
+            
+/*footer*/
+footer{
+    position: relative;
+    height: 20vh;
+    width: 100%;
+}
+footer{
+    background-color: var(--color3);
+    color: var(--color4);
+    text-align: center;
+    padding-top: 3vh;
+}
+footer p{
+    margin: 0;
+}
+
+.info{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+}
+.list_info{
+    text-align: left;
+    position: relative;
+    top: 0%;
+    left: 40%;
+    width: 80%;
+    height: auto;
+}
+.TA{
+    background-color: var(--color8);
+    border: none;
+    margin: 5px;
+    color: white;
+}
+.TA::placeholder{
+    color: white;
+}
+.TA:focus{
+    outline: none;
+    box-shadow: 0 0 5px var(--color2);
+}
+.TA:hover{
+    box-shadow: 0 0 5px var(--color2);
+}
+.form_M form{
+    position: relative;
+    top: 0%;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+}
+form textarea{
+    background-color: var(--color8);
+    color: white;
+    width: 90%;
+    resize: none;
+}
+form .send{
+    background-color: var(--color8);
+    color: var(--color);
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+textarea:hover{
+    box-shadow: 0 0 5px var(--color2);
+}
+.github{
+    background-color: white;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.linkedin{
+    background-color: white;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
